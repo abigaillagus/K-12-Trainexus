@@ -361,7 +361,7 @@
                     
                     <div id="imagePreviewContainer" class="hidden mt-2 relative">
                         <img id="imagePreview" src="" alt="Selected Preview" class="w-full h-36 object-cover rounded-lg border">
-                        <span class="absolute top-2 right-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Ready to Sync</span>
+                        <span class="absolute top-2 right-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Auto-Optimized</span>
                     </div>
                 </div>
 
@@ -685,15 +685,45 @@
             document.getElementById('entryForm').reset();
         };
 
+        // Automatic Client-Side Image Compression using HTML5 Canvas
         window.previewSelectedImage = function(event) {
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    base64ImageData = e.target.result;
-                    const preview = document.getElementById('imagePreview');
-                    preview.src = base64ImageData;
-                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
+                    const img = new Image();
+                    img.onload = function() {
+                        const canvas = document.createElement('canvas');
+                        let width = img.width;
+                        let height = img.height;
+                        const maxDim = 800; // Limit dimensions to 800px max
+
+                        if (width > height) {
+                            if (width > maxDim) {
+                                height *= maxDim / width;
+                                width = maxDim;
+                            }
+                        } else {
+                            if (height > maxDim) {
+                                width *= maxDim / height;
+                                height = maxDim;
+                            }
+                        }
+
+                        canvas.width = width;
+                        canvas.height = height;
+
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, width, height);
+
+                        // Compress quality to 0.7 JPEG to keep Base64 string small
+                        base64ImageData = canvas.toDataURL('image/jpeg', 0.7);
+
+                        const preview = document.getElementById('imagePreview');
+                        preview.src = base64ImageData;
+                        document.getElementById('imagePreviewContainer').classList.remove('hidden');
+                    };
+                    img.src = e.target.result;
                 };
                 reader.readAsDataURL(file);
             }
