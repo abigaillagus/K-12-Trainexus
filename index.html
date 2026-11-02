@@ -4,37 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-12 Trainexus | Labinay National High School</title>
-
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Load FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-slate-100 font-sans text-slate-800">
 
-    <!-- Header Banner showing database connection status -->
     <div id="dbStatus" class="bg-amber-500 text-white text-xs text-center py-1 font-semibold">
         Connecting to Labinay NHS Realtime Cloud Database...
     </div>
 
-    <!-- NAVIGATION BAR -->
     <header class="bg-emerald-900 text-white p-4 shadow-lg border-b-4 border-amber-400">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="Labinay_logo.png" 
-                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Labinay+NHS&background=047857&color=fff&size=128';" 
-                     alt="Labinay National High School Logo" 
-                     class="w-12 h-12 rounded-full border-2 border-amber-400 object-cover bg-white shadow">
+                <img src="Labinay_logo.png" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Labinay+NHS&background=047857&color=fff&size=128';" alt="Logo" class="w-12 h-12 rounded-full border-2 border-amber-400 object-cover bg-white shadow">
                 <div>
-                    <h1 class="text-xl font-bold leading-tight flex items-center gap-2 tracking-wide">
-                        K-12 TRAINEXUS
-                    </h1>
+                    <h1 class="text-xl font-bold leading-tight tracking-wide">K-12 TRAINEXUS</h1>
                     <p class="text-xs text-emerald-200 font-medium">Labinay National High School — Ozamiz City</p>
                 </div>
             </div>
             
-            <!-- User Status & Logout -->
             <div id="userNavControls" class="hidden flex items-center gap-3">
                 <span id="activeUserBadge" class="text-xs bg-emerald-800 text-emerald-100 px-3 py-1.5 rounded-full border border-emerald-700 font-medium">
                     <i class="fa-solid fa-user-circle mr-1"></i> Logged In
@@ -46,350 +34,195 @@
         </div>
     </header>
 
-    <!-- LANDING / SIGN UP & LOG IN PAGE -->
+    <!-- LANDING PAGE / LOGIN -->
     <div id="authPage" class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8 space-y-8">
-        
-        <div class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 border-b-4 border-amber-400">
-            <div class="space-y-3 max-w-xl z-10">
-                <div class="flex items-center gap-2">
-                    <span class="bg-amber-400 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                        DepEd Region X • Division of Ozamiz City
-                    </span>
-                </div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight tracking-wide">
-                    LABINAY NATIONAL HIGH SCHOOL
-                </h2>
-                <p class="text-amber-300 font-semibold text-sm sm:text-base">
-                    Senior High School Work Immersion & JDVP E-Portfolio System
-                </p>
-                <p class="text-emerald-100 text-xs sm:text-sm leading-relaxed">
-                    A centralized digital portal for Senior High School learners, TVL instructors, and industry partners to record daily tasks, evaluate practical skills, and verify competency achievements.
-                </p>
+        <div class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border-b-4 border-amber-400">
+            <div class="space-y-3 max-w-xl">
+                <span class="bg-amber-400 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full uppercase">DepEd Region X • Division of Ozamiz City</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-wide">LABINAY NATIONAL HIGH SCHOOL</h2>
+                <p class="text-amber-300 font-semibold text-sm">Senior High School Work Immersion & JDVP E-Portfolio System</p>
             </div>
-
-            <div class="shrink-0 z-10 bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/20 text-center shadow-2xl">
-                <img src="Labinay_logo.png" 
-                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=LNHS+1964&background=047857&color=fbbf24&size=256';" 
-                     alt="Labinay National High School Seal" 
-                     class="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-amber-400 shadow-2xl mx-auto object-cover bg-white">
-                <p class="text-xs font-extrabold text-amber-300 mt-2 tracking-widest">Labinay NHS PORTAL</p>
-            </div>
+            <img src="Labinay_logo.png" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=LNHS&background=047857&color=fbbf24&size=256';" class="w-28 h-28 rounded-full border-4 border-amber-400 shadow-2xl object-cover bg-white">
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
-            <div class="lg:col-span-7 space-y-4">
+            <div class="lg:col-span-7">
                 <div class="bg-white rounded-2xl p-5 shadow-lg border border-slate-200">
-                    <div class="border-b pb-3 flex justify-between items-center">
-                        <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
-                            <i class="fa-solid fa-images text-emerald-700"></i>
-                            <span>Labinay NHS Practical Training Gallery</span>
-                        </h3>
-                        <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">
-                            SHS TVL & Academic Tracks
-                        </span>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
-                        <div class="group relative overflow-hidden rounded-xl shadow border border-slate-200 bg-slate-900">
-                            <img src="Computer_Assembly.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/f59e0b?text=CSS+Network+Rack';" class="w-full h-32 object-cover opacity-90 group-hover:scale-105 transition duration-300" alt="Computer System Assembly">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                                <p class="text-[10px] text-amber-300 font-bold leading-tight">Computer System Assembly</p>
-                            </div>
-                        </div>
-
-                        <div class="group relative overflow-hidden rounded-xl shadow border border-slate-200 bg-slate-900">
-                            <img src="Networking.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/38bdf8?text=Cable+Crimping';" class="w-full h-32 object-cover opacity-90 group-hover:scale-105 transition duration-300" alt="Network Cable Assembly">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                                <p class="text-[10px] text-amber-300 font-bold leading-tight">Practical Cable Crimping</p>
-                            </div>
-                        </div>
-
-                        <div class="group relative overflow-hidden rounded-xl shadow border border-slate-200 bg-slate-900">
-                            <img src="Cookery.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/34d399?text=Home+Economics';" class="w-full h-32 object-cover opacity-90 group-hover:scale-105 transition duration-300" alt="Culinary Training">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                                <p class="text-[10px] text-amber-300 font-bold leading-tight">Home Economics Food Prep</p>
-                            </div>
-                        </div>
-
-                        <div class="group relative overflow-hidden rounded-xl shadow border border-slate-200 bg-slate-900">
-                            <img src="Cookery_Plating.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/f43f5e?text=Culinary+Plating';" class="w-full h-32 object-cover opacity-90 group-hover:scale-105 transition duration-300" alt="Cookery Plating">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                                <p class="text-[10px] text-amber-300 font-bold leading-tight">Culinary & Sauce Plating</p>
-                            </div>
-                        </div>
-
-                        <div class="group relative overflow-hidden rounded-xl shadow border border-slate-200 bg-slate-900">
-                            <img src="Fair.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/a855f7?text=Pan+Frying';" class="w-full h-32 object-cover opacity-90 group-hover:scale-105 transition duration-300" alt="JDVP/Work Immersion Fair">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                                <p class="text-[10px] text-amber-300 font-bold leading-tight">JDVP/Work Immersion Fair</p>
-                            </div>
-                        </div>
-
-                        <div class="group relative overflow-hidden rounded-xl shadow border border-slate-200 bg-slate-900">
-                            <img src="monitoring.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/fbbf24?text=Teacher+Evaluation';" class="w-full h-32 object-cover opacity-90 group-hover:scale-105 transition duration-300" alt="Industry Meeting">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                                <p class="text-[10px] text-amber-300 font-bold leading-tight">Teacher & Partner Evaluation</p>
-                            </div>
-                        </div>
+                    <h3 class="font-bold text-slate-800 text-base mb-3"><i class="fa-solid fa-images text-emerald-700 mr-2"></i>Practical Training Gallery</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <img src="Computer_Assembly.jpg" class="rounded-xl h-28 w-full object-cover shadow" alt="CSS">
+                        <img src="Networking.jpeg" class="rounded-xl h-28 w-full object-cover shadow" alt="Crimping">
+                        <img src="Cookery.jpeg" class="rounded-xl h-28 w-full object-cover shadow" alt="HE">
+                        <img src="Cookery_Plating.jpeg" class="rounded-xl h-28 w-full object-cover shadow" alt="Plating">
+                        <img src="Fair.jpg" class="rounded-xl h-28 w-full object-cover shadow" alt="JDVP Fair">
+                        <img src="monitoring.jpeg" class="rounded-xl h-28 w-full object-cover shadow" alt="Evaluation">
                     </div>
                 </div>
             </div>
 
-            <!-- Sign In / Log In Form Card -->
             <div class="lg:col-span-5">
                 <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-200 space-y-6">
-                    
                     <div class="flex bg-slate-100 p-1.5 rounded-xl text-sm font-semibold">
-                        <button type="button" id="btnLoginTab" onclick="switchAuthMode('login')" class="flex-1 py-2.5 rounded-lg bg-emerald-800 text-white shadow transition cursor-pointer">Log In</button>
-                        <button type="button" id="btnSignupTab" onclick="switchAuthMode('signup')" class="flex-1 py-2.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer">Create Account</button>
+                        <button type="button" id="btnLoginTab" onclick="switchAuthMode('login')" class="flex-1 py-2.5 rounded-lg bg-emerald-800 text-white shadow">Log In</button>
+                        <button type="button" id="btnSignupTab" onclick="switchAuthMode('signup')" class="flex-1 py-2.5 rounded-lg text-slate-600">Create Account</button>
                     </div>
 
-                    <!-- LOGIN FORM -->
                     <form id="loginForm" onsubmit="handleAuthSubmit(event)" class="space-y-4">
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">User Role</label>
-                            <select id="loginRole" class="w-full border p-2.5 rounded-lg text-sm bg-slate-50 focus:ring-2 focus:ring-emerald-600 outline-none font-medium">
+                            <select id="loginRole" class="w-full border p-2.5 rounded-lg text-sm bg-slate-50 font-medium">
                                 <option value="student">Student (Grade 12 Work Immersion / JDVP)</option>
-                                <option value="trainer">Teacher / Industry Partner Assessor </option>
+                                <option value="trainer">Teacher / Industry Partner Assessor</option>
                             </select>
                         </div>
-
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">LRN / Email / Employee ID</label>
-                            <input type="text" id="loginId" required placeholder="e.g. 109283746501 or student@labinaynhs.edu.ph" class="w-full border p-2.5 rounded-lg text-sm focus:ring-2 focus:ring-emerald-600 outline-none">
+                            <input type="text" id="loginId" required placeholder="Enter LRN or Email" class="w-full border p-2.5 rounded-lg text-sm">
                         </div>
-
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Password</label>
-                            <input type="password" id="loginPass" required placeholder="••••••••" class="w-full border p-2.5 rounded-lg text-sm focus:ring-2 focus:ring-emerald-600 outline-none">
+                            <input type="password" id="loginPass" required placeholder="••••••••" class="w-full border p-2.5 rounded-lg text-sm">
                         </div>
-
-                        <button type="submit" class="w-full bg-emerald-800 hover:bg-emerald-900 text-white py-3 rounded-xl font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
-                            <span>Sign In to Labinay Trainexus</span>
+                        <button type="submit" class="w-full bg-emerald-800 hover:bg-emerald-900 text-white py-3 rounded-xl font-bold text-sm shadow flex items-center justify-center gap-2">
+                            <span>Sign In to Trainexus</span>
                             <i class="fa-solid fa-right-to-bracket"></i>
                         </button>
                     </form>
 
-                    <!-- REGISTER FORM -->
                     <form id="signupForm" onsubmit="handleAuthSubmit(event)" class="hidden space-y-4">
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Account Category</label>
-                            <select id="signupRole" class="w-full border p-2.5 rounded-lg text-sm bg-slate-50 focus:ring-2 focus:ring-emerald-600 outline-none font-medium">
+                            <select id="signupRole" class="w-full border p-2.5 rounded-lg text-sm bg-slate-50 font-medium">
                                 <option value="student">Grade 12 Senior High Student</option>
                                 <option value="trainer">Teacher / Industry Partner Assessor</option>
                             </select>
                         </div>
-
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Full Name</label>
-                            <input type="text" id="signupName" required placeholder="First Name, Middle Name, Last Name" class="w-full border p-2.5 rounded-lg text-sm focus:ring-2 focus:ring-emerald-600 outline-none">
+                            <input type="text" id="signupName" required placeholder="First, Middle, Last Name" class="w-full border p-2.5 rounded-lg text-sm">
                         </div>
-
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Email Address</label>
-                            <input type="email" id="signupEmail" required placeholder="student@labinaynhs.edu.ph" class="w-full border p-2.5 rounded-lg text-sm focus:ring-2 focus:ring-emerald-600 outline-none">
+                            <input type="email" id="signupEmail" required placeholder="student@labinaynhs.edu.ph" class="w-full border p-2.5 rounded-lg text-sm">
                         </div>
-
                         <div>
-                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Learner Reference Number (LRN) / Employee ID</label>
-                            <input type="text" id="signupLrn" required placeholder="12-digit LRN (e.g., 109283746501)" class="w-full border p-2.5 rounded-lg text-sm focus:ring-2 focus:ring-emerald-600 outline-none">
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">LRN / Employee ID</label>
+                            <input type="text" id="signupLrn" required placeholder="12-digit LRN" class="w-full border p-2.5 rounded-lg text-sm">
                         </div>
-
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Track & Strand</label>
-                            <select id="signupTrack" class="w-full border p-2.5 rounded-lg text-sm focus:ring-2 focus:ring-emerald-600 outline-none">
+                            <select id="signupTrack" class="w-full border p-2.5 rounded-lg text-sm">
                                 <option value="TVL-CSS">TVL - Computer System Servicing (CSS)</option>
                                 <option value="TVL-HE">TVL - Home Economics / Cookery</option>
                             </select>
                         </div>
-
                         <div>
                             <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Account Password</label>
-                            <input type="password" id="signupPass" required placeholder="Create a password (min. 6 characters)" class="w-full border p-2.5 rounded-lg text-sm focus:ring-2 focus:ring-emerald-600 outline-none">
+                            <input type="password" id="signupPass" required placeholder="Min. 6 characters" class="w-full border p-2.5 rounded-lg text-sm">
                         </div>
-
-                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 py-3 rounded-xl font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 py-3 rounded-xl font-bold text-sm shadow flex items-center justify-center gap-2">
                             <span>Register & Access Portal</span>
                             <i class="fa-solid fa-user-check"></i>
                         </button>
                     </form>
-
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- MAIN APP DASHBOARD -->
+    <!-- MAIN DASHBOARD -->
     <main id="appDashboard" class="hidden max-w-4xl mx-auto p-4 space-y-6">
-
         <!-- STUDENT WORKSPACE -->
         <div id="studentSection" class="space-y-6">
-            
             <div class="bg-white p-6 rounded-xl shadow border border-gray-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div class="flex items-center gap-4">
-                    <img src="Labinay Logo_ Final.jpg" 
-                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Labinay+NHS&background=047857&color=fff&size=128';" 
-                         alt="Labinay Logo" class="w-16 h-16 rounded-full border-2 border-emerald-700 shadow object-cover">
-                    <div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">Labinay National High School</span>
-                            <span class="text-xs text-gray-500">School ID: 304161</span>
-                        </div>
-                        <h2 id="displayStudentName" class="text-2xl font-bold text-gray-900">Juan Dela Cruz</h2>
-                        <p id="displayStudentEmail" class="text-xs text-emerald-700 font-medium">Email: student@labinaynhs.edu.ph</p>
-                        <p class="text-xs text-gray-600 mt-0.5">Program: Work Immersion & JDVP-TVL</p>
-                        <div class="flex gap-2 mt-2">
-                            <span id="displayStudentTrack" class="bg-blue-100 text-blue-800 text-xs px-2.5 py-0.5 rounded-full font-bold">Track: TVL-CSS</span>
-                            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-bold">Ozamiz City Division</span>
-                        </div>
-                    </div>
+                <div>
+                    <h2 id="displayStudentName" class="text-2xl font-bold text-gray-900">Student Name</h2>
+                    <p id="displayStudentEmail" class="text-xs text-emerald-700 font-medium">Email</p>
+                    <span id="displayStudentTrack" class="inline-block mt-2 bg-blue-100 text-blue-800 text-xs px-2.5 py-0.5 rounded-full font-bold">Track</span>
                 </div>
                 <button onclick="openModal()" class="bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-2 shadow">
                     <i class="fa-solid fa-plus"></i> Add Log / Evidence
                 </button>
             </div>
 
-            <!-- List of Submitted Evidence Entries -->
             <div class="bg-white rounded-xl shadow border border-gray-200 p-6">
-                <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex justify-between items-center">
-                    <span>Immersion & JDVP Logs</span>
-                    <span class="text-xs text-gray-500 font-normal">Labinay NHS - DepEd Order No. 30, s. 2017</span>
-                </h3>
-                <div id="evidenceList" class="space-y-4">
-                    <!-- Dynamic Javascript Content -->
-                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Submitted Immersion & JDVP Logs</h3>
+                <div id="evidenceList" class="space-y-4"></div>
             </div>
         </div>
 
-        <!-- TRAINER / SUPERVISOR REVIEW PANEL -->
+        <!-- TEACHER EVALUATION WORKSPACE -->
         <div id="trainerSection" class="hidden space-y-6">
             <div class="bg-emerald-950 text-white p-6 rounded-xl shadow border-l-4 border-amber-400">
-                <div class="flex justify-between items-center mb-2">
-                    <div class="flex items-center gap-3">
-                        <img src="Labinay_logo.png" 
-                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Labinay+NHS&background=047857&color=fff&size=128';" 
-                             class="w-8 h-8 rounded-full border">
-                        <span class="bg-amber-400 text-slate-950 font-bold text-[10px] uppercase px-2 py-0.5 rounded">Labinay NHS Industry Portal</span>
-                    </div>
-
-                    <!-- Teacher Notifications Badge -->
-                    <div class="relative flex items-center gap-2 bg-emerald-900 border border-emerald-700 px-3 py-1.5 rounded-lg text-xs">
-                        <i class="fa-solid fa-bell text-amber-400"></i>
-                        <span id="pendingNotificationBadge" class="bg-red-500 text-white font-bold text-[10px] px-2 py-0.5 rounded-full">0 New Submissions</span>
-                    </div>
-                </div>
                 <h2 class="text-xl font-bold">Supervisor Evaluation Panel</h2>
-                <p class="text-sm text-emerald-200">Review Work Immersion daily logs, practical networking/culinary photos, and JDVP competencies submitted by students.</p>
+                <p class="text-sm text-emerald-200">Review student evidence logs across all registered mobile & desktop devices.</p>
             </div>
 
-            <!-- TEACHER FILTER TABS: PENDING vs APPROVED -->
-            <div class="bg-white rounded-xl shadow border border-gray-200 p-6 space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b pb-4">
-                    <h3 class="text-lg font-bold text-gray-800 flex items-center gap-2">
-                        <i class="fa-solid fa-list-check text-emerald-700"></i>
-                        <span>Student Submissions Queue</span>
-                    </h3>
+            <div class="flex gap-2 bg-slate-200 p-1.5 rounded-xl text-xs font-bold">
+                <button type="button" id="tabPendingBtn" onclick="setTrainerFilter('Pending Verification')" class="flex-1 py-2.5 rounded-lg bg-amber-500 text-slate-950 shadow">
+                    Pending Logs (<span id="pendingCount">0</span>)
+                </button>
+                <button type="button" id="tabApprovedBtn" onclick="setTrainerFilter('Approved')" class="flex-1 py-2.5 rounded-lg text-slate-700">
+                    Approved Logs (<span id="approvedCount">0</span>)
+                </button>
+            </div>
 
-                    <!-- Filter Buttons -->
-                    <div class="flex bg-slate-100 p-1 rounded-xl text-xs font-bold w-full sm:w-auto">
-                        <button type="button" id="btnFilterPending" onclick="setTeacherFilter('Pending Verification')" class="flex-1 sm:flex-initial px-4 py-2 rounded-lg bg-amber-500 text-slate-950 shadow transition flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>Pending (<span id="filterPendingCount">0</span>)</span>
-                        </button>
-                        <button type="button" id="btnFilterApproved" onclick="setTeacherFilter('Approved')" class="flex-1 sm:flex-initial px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-check-circle"></i>
-                            <span>Approved (<span id="filterApprovedCount">0</span>)</span>
-                        </button>
-                    </div>
-                </div>
-
-                <div id="trainerQueue" class="space-y-4">
-                    <!-- Dynamic Javascript Content -->
-                </div>
+            <div class="bg-white rounded-xl shadow border border-gray-200 p-6">
+                <div id="trainerQueue" class="space-y-4"></div>
             </div>
         </div>
-
     </main>
 
-    <!-- ADD EVIDENCE POPUP MODAL -->
+    <!-- UPLOAD MODAL -->
     <div id="uploadModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50">
         <div class="bg-white rounded-xl p-6 max-w-md w-full space-y-4 shadow-xl">
             <div class="flex justify-between items-center border-b pb-2">
                 <h3 class="font-bold text-lg">Log Activity / Skill Evidence</h3>
                 <button onclick="closeModal()" class="text-gray-500 text-xl font-bold">&times;</button>
             </div>
-
-            <form id="entryForm" onsubmit="saveEntry(event)" class="space-y-3">
+            <form onsubmit="saveEntry(event)" class="space-y-3">
                 <div>
                     <label class="block text-xs font-bold text-gray-700 mb-1">Program Type</label>
-                    <select id="programTypeInput" required class="w-full border p-2 rounded text-sm bg-gray-50">
-                        <option value="Work Immersion">Work Immersion (DepEd Academic/TVL Track)</option>
-                        <option value="JDVP-TVL">JDVP Voucher Training (TVL Partner TVI)</option>
+                    <select id="programTypeInput" required class="w-full border p-2 rounded text-sm">
+                        <option value="Work Immersion">Work Immersion</option>
+                        <option value="JDVP-TVL">JDVP-TVL Voucher Program</option>
                     </select>
                 </div>
-
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Activity / Competency Module</label>
-                    <select id="moduleInput" required class="w-full border p-2 rounded text-sm">
-                        <optgroup label="Work Immersion Tasks">
-                            <option value="WI-LOG">Daily Work Accomplishment & Reflection Log</option>
-                            <option value="WI-SAFETY">Workplace Safety & Orientation</option>
-                            <option value="WI-ETHICS">Work Ethics & Professionalism Training</option>
-                        </optgroup>
-                        <optgroup label="JDVP Technical Modules">
-                                <option value="CSS-01">Computer Hardware Servicing & Setup</option>
-                                <option value="TVL-HE">Cookery</option>
-                        </optgroup>
-                    </select>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Activity Title</label>
+                    <input type="text" id="titleInput" required placeholder="e.g. Conducted inventory assessment" class="w-full border p-2 rounded text-sm">
                 </div>
-
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Activity Title / Task Summary</label>
-                    <input type="text" id="titleInput" required placeholder="e.g. Conducted inventory assessment & file archiving" class="w-full border p-2 rounded text-sm">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Student Reflection</label>
+                    <textarea id="reflectionInput" rows="3" required placeholder="Lessons learned..." class="w-full border p-2 rounded text-sm"></textarea>
                 </div>
-
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Student Reflection & Key Learnings</label>
-                    <textarea id="reflectionInput" rows="3" required placeholder="Describe what skills you applied and lessons learned today..." class="w-full border p-2 rounded text-sm"></textarea>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Upload Photo / Practical Evidence</label>
-                    <input type="file" id="imageFileInput" accept="image/*" onchange="previewSelectedImage(event)" class="w-full border p-2 rounded text-xs text-slate-600 bg-slate-50 cursor-pointer">
-                    
-                    <div id="imagePreviewContainer" class="hidden mt-2 relative">
-                        <img id="imagePreview" src="" alt="Selected Preview" class="w-full h-36 object-cover rounded-lg border">
-                        <span class="absolute top-2 right-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Auto-Optimized</span>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Upload Photo (Auto-Compressed)</label>
+                    <input type="file" id="imageFileInput" accept="image/*" onchange="previewAndCompressImage(event)" class="w-full border p-2 rounded text-xs bg-slate-50">
+                    <div id="imagePreviewContainer" class="hidden mt-2">
+                        <img id="imagePreview" src="" class="w-full h-36 object-cover rounded-lg border">
                     </div>
                 </div>
-
                 <div class="flex justify-end gap-2 pt-2">
                     <button type="button" onclick="closeModal()" class="px-4 py-2 border rounded text-sm">Cancel</button>
-                    <button type="submit" class="px-4 py-2 bg-emerald-800 text-white rounded text-sm font-semibold hover:bg-emerald-900">Submit Log</button>
+                    <button type="submit" class="px-4 py-2 bg-emerald-800 text-white rounded text-sm font-semibold">Submit Log</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- JAVASCRIPT LOGIC & FIREBASE DATABASE -->
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, updateDoc, doc, onSnapshot, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+        import { getFirestore, collection, addDoc, updateDoc, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'trainexus-eportfolio-app';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' 
-            ? JSON.parse(__firebase_config) 
-            : {
-               apiKey: "AIzaSyCUqlk5_dOzx2UBg0gdNSI2Y7YBuy2EF64",
-               authDomain: "k-12-trainexus.firebaseapp.com",
-               projectId: "k-12-trainexus",
-               storageBucket: "k-12-trainexus.firebasestorage.app",
-               messagingSenderId: "313598952521",
-               appId: "1:313598952521:web:47eedd16e8abe12fae2b98",
-               measurementId: "G-E5RWJ81BW2"
+        const firebaseConfig = {
+            apiKey: "AIzaSyCUqlk5_dOzx2UBg0gdNSI2Y7YBuy2EF64",
+            authDomain: "k-12-trainexus.firebaseapp.com",
+            projectId: "k-12-trainexus",
+            storageBucket: "k-12-trainexus.appspot.com",
+            messagingSenderId: "313598952521",
+            appId: "1:313598952521:web:47eedd16e8abe12fae2b98"
         };
 
         const app = initializeApp(firebaseConfig);
@@ -397,279 +230,89 @@
         const db = getFirestore(app);
 
         let entries = [];
-        let registeredUsers = [];
-        let currentUser = null;
-        let activeRole = 'student';
-        let loggedInUserLrn = '';
-        let loggedInUserName = '';
-        let loggedInUserEmail = '';
-        let base64ImageData = null;
-        let activeTeacherFilter = 'Pending Verification';
+        let activeUser = null;
+        let trainerFilter = 'Pending Verification';
+        let compressedImageData = null;
 
-        const publicCollectionPath = collection(db, 'artifacts', appId, 'public', 'data', 'trainexus_entries');
-        const usersCollectionPath = collection(db, 'artifacts', appId, 'public', 'data', 'trainexus_users');
+        const entriesRef = collection(db, 'trainexus_entries');
 
-        // Helper: Local Storage Fallback Backup
-        function getLocalEntries() {
-            try {
-                const stored = localStorage.getItem('trainexus_local_entries');
-                return stored ? JSON.parse(stored) : [];
-            } catch (e) {
-                return [];
-            }
-        }
-
-        function saveLocalEntry(entryObj) {
-            try {
-                const local = getLocalEntries();
-                local.unshift(entryObj);
-                localStorage.setItem('trainexus_local_entries', JSON.stringify(local));
-            } catch (e) {
-                console.error("Local storage save error:", e);
-            }
-        }
-
-        function updateLocalEntryStatus(id, status, feedback) {
-            try {
-                const local = getLocalEntries();
-                const item = local.find(x => x.id === id);
-                if (item) {
-                    item.status = status;
-                    item.teacherFeedback = feedback;
-                    localStorage.setItem('trainexus_local_entries', JSON.stringify(local));
-                }
-            } catch (e) {
-                console.error("Local storage update error:", e);
-            }
-        }
-
-        async function initAuth() {
-            try {
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
-                }
-            } catch (err) {
-                console.warn("Auth initialization error, falling back to local mode:", err);
-                const statusDiv = document.getElementById('dbStatus');
-                if (statusDiv) {
-                    statusDiv.className = "bg-emerald-600 text-white text-xs text-center py-1 font-semibold";
-                    statusDiv.innerText = "⚡ Labinay NHS Trainexus System Ready (Offline/Local Cache Active)";
-                }
-                entries = getLocalEntries();
+        signInAnonymously(auth).then(() => {
+            document.getElementById('dbStatus').className = "bg-emerald-600 text-white text-xs text-center py-1 font-semibold";
+            document.getElementById('dbStatus').innerText = "⚡ Connected to Labinay NHS Cloud Database";
+            
+            onSnapshot(entriesRef, (snapshot) => {
+                entries = [];
+                snapshot.forEach(docSnap => {
+                    entries.push({ id: docSnap.id, ...docSnap.data() });
+                });
                 renderApp();
-            }
-        }
-        initAuth();
-
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                currentUser = user;
-                const statusDiv = document.getElementById('dbStatus');
-                if (statusDiv) {
-                    statusDiv.className = "bg-emerald-600 text-white text-xs text-center py-1 font-semibold";
-                    statusDiv.innerText = "⚡ Labinay NHS Trainexus Connected to Realtime Database";
-                }
-                listenToCloudDatabase();
-                listenToUserAccounts();
-            }
+            });
+        }).catch(err => {
+            console.error("Firebase auth error:", err);
+            document.getElementById('dbStatus').className = "bg-red-600 text-white text-xs text-center py-1 font-semibold";
+            document.getElementById('dbStatus').innerText = "⚠️ Offline Mode: Check Firebase Rules";
         });
 
-        function listenToUserAccounts() {
-            if (!currentUser) return;
-            onSnapshot(usersCollectionPath, (snapshot) => {
-                registeredUsers = [];
-                snapshot.forEach((docSnap) => {
-                    registeredUsers.push({ id: docSnap.id, ...docSnap.data() });
-                });
-            }, (error) => {
-                console.error("Error fetching users collection:", error);
-            });
-        }
-
-        function listenToCloudDatabase() {
-            if (!currentUser) return;
-            onSnapshot(publicCollectionPath, (snapshot) => {
-                const cloudEntries = [];
-                snapshot.forEach((docSnap) => {
-                    cloudEntries.push({ id: docSnap.id, ...docSnap.data() });
-                });
-                
-                // Combine Cloud and Local storage so nothing is ever lost
-                const localEntries = getLocalEntries();
-                const map = new Map();
-                localEntries.forEach(item => map.set(item.id, item));
-                cloudEntries.forEach(item => map.set(item.id, item));
-                
-                entries = Array.from(map.values());
-                renderApp();
-            }, (error) => {
-                console.warn("Cloud snapshot error, loading local backup:", error);
-                entries = getLocalEntries();
-                renderApp();
-            });
-        }
-
-        window.setTeacherFilter = function(filterStatus) {
-            activeTeacherFilter = filterStatus;
-            const btnPending = document.getElementById('btnFilterPending');
-            const btnApproved = document.getElementById('btnFilterApproved');
-
-            if (filterStatus === 'Pending Verification') {
-                btnPending.className = "flex-1 sm:flex-initial px-4 py-2 rounded-lg bg-amber-500 text-slate-950 shadow transition flex items-center justify-center gap-1.5";
-                btnApproved.className = "flex-1 sm:flex-initial px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5";
-            } else {
-                btnApproved.className = "flex-1 sm:flex-initial px-4 py-2 rounded-lg bg-emerald-700 text-white shadow transition flex items-center justify-center gap-1.5";
-                btnPending.className = "flex-1 sm:flex-initial px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5";
-            }
-            renderApp();
-        };
-
         window.switchAuthMode = function(mode) {
-            const loginTab = document.getElementById('btnLoginTab');
-            const signupTab = document.getElementById('btnSignupTab');
             const loginForm = document.getElementById('loginForm');
             const signupForm = document.getElementById('signupForm');
-
-            if (!loginTab || !signupTab || !loginForm || !signupForm) return;
+            const loginTab = document.getElementById('btnLoginTab');
+            const signupTab = document.getElementById('btnSignupTab');
 
             if (mode === 'login') {
-                loginTab.className = "flex-1 py-2.5 rounded-lg bg-emerald-800 text-white shadow transition cursor-pointer";
-                signupTab.className = "flex-1 py-2.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer";
                 loginForm.classList.remove('hidden');
                 signupForm.classList.add('hidden');
+                loginTab.className = "flex-1 py-2.5 rounded-lg bg-emerald-800 text-white shadow";
+                signupTab.className = "flex-1 py-2.5 rounded-lg text-slate-600";
             } else {
-                signupTab.className = "flex-1 py-2.5 rounded-lg bg-emerald-800 text-white shadow transition cursor-pointer";
-                loginTab.className = "flex-1 py-2.5 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer";
                 signupForm.classList.remove('hidden');
                 loginForm.classList.add('hidden');
+                signupTab.className = "flex-1 py-2.5 rounded-lg bg-emerald-800 text-white shadow";
+                loginTab.className = "flex-1 py-2.5 rounded-lg text-slate-600";
             }
         };
 
-        window.handleAuthSubmit = async function(event) {
+        window.handleAuthSubmit = function(event) {
             event.preventDefault();
-            
             const isLogin = !document.getElementById('loginForm').classList.contains('hidden');
-            
+
             if (isLogin) {
                 const role = document.getElementById('loginRole').value;
                 const idVal = document.getElementById('loginId').value.trim();
-                const passVal = document.getElementById('loginPass').value.trim();
-
-                let matchedUser = registeredUsers.find(u => 
-                    (u.lrn === idVal || u.email === idVal) && u.password === passVal
-                );
-
-                if (!matchedUser && currentUser) {
-                    try {
-                        const qLrn = query(usersCollectionPath, where("lrn", "==", idVal), where("password", "==", passVal));
-                        const snapLrn = await getDocs(qLrn);
-                        
-                        if (!snapLrn.empty) {
-                            matchedUser = snapLrn.docs[0].data();
-                        } else {
-                            const qEmail = query(usersCollectionPath, where("email", "==", idVal), where("password", "==", passVal));
-                            const snapEmail = await getDocs(qEmail);
-                            if (!snapEmail.empty) {
-                                matchedUser = snapEmail.docs[0].data();
-                            }
-                        }
-                    } catch (err) {
-                        console.warn("Offline auth query warning:", err);
-                    }
-                }
-
-                // If demo/offline or match found
-                activeRole = matchedUser ? (matchedUser.role || role) : role;
-                loggedInUserLrn = matchedUser ? (matchedUser.lrn || idVal) : idVal;
-                loggedInUserName = matchedUser ? (matchedUser.fullName || idVal) : idVal;
-                loggedInUserEmail = matchedUser ? (matchedUser.email || idVal) : idVal;
-
-                window.activeUserSession = {
-                    role: activeRole,
-                    lrn: loggedInUserLrn,
-                    name: loggedInUserName,
-                    email: loggedInUserEmail
-                };
-
-                document.getElementById('displayStudentName').innerText = loggedInUserName;
-                document.getElementById('displayStudentEmail').innerText = `Email: ${loggedInUserEmail}`;
-                document.getElementById('displayStudentTrack').innerText = `Track: ${matchedUser?.track || 'TVL-CSS'}`;
-
-                showDashboard();
+                activeUser = { role, lrn: idVal, name: idVal, email: idVal, track: 'TVL-CSS' };
             } else {
                 const role = document.getElementById('signupRole').value;
-                const fullName = document.getElementById('signupName').value.trim();
+                const name = document.getElementById('signupName').value.trim();
                 const email = document.getElementById('signupEmail').value.trim();
                 const lrn = document.getElementById('signupLrn').value.trim();
                 const track = document.getElementById('signupTrack').value;
-                const password = document.getElementById('signupPass').value.trim();
-
-                const newUserDoc = {
-                    role,
-                    fullName,
-                    email,
-                    lrn,
-                    track,
-                    password,
-                    createdAt: new Date().toISOString()
-                };
-
-                try {
-                    await addDoc(usersCollectionPath, newUserDoc);
-                } catch (err) {
-                    console.warn("Could not sync user to cloud, stored locally:", err);
-                }
-
-                activeRole = role;
-                loggedInUserLrn = lrn;
-                loggedInUserName = fullName;
-                loggedInUserEmail = email;
-
-                window.activeUserSession = {
-                    role: activeRole,
-                    lrn: loggedInUserLrn,
-                    name: loggedInUserName,
-                    email: loggedInUserEmail
-                };
-
-                document.getElementById('displayStudentName').innerText = fullName;
-                document.getElementById('displayStudentEmail').innerText = `Email: ${email}`;
-                document.getElementById('displayStudentTrack').innerText = `Track: ${track}`;
-
-                alert("Registration successful! Logging into Trainexus Portal.");
-                showDashboard();
+                activeUser = { role, name, email, lrn, track };
             }
-        };
 
-        function showDashboard() {
             document.getElementById('authPage').classList.add('hidden');
             document.getElementById('appDashboard').classList.remove('hidden');
             document.getElementById('userNavControls').classList.remove('hidden');
+            document.getElementById('activeUserBadge').innerHTML = `<i class="fa-solid fa-user-circle mr-1"></i> ${activeUser.name} (${activeUser.role.toUpperCase()})`;
 
-            const activeUserBadge = document.getElementById('activeUserBadge');
-            if (activeUserBadge) {
-                activeUserBadge.innerHTML = `<i class="fa-solid fa-user-circle mr-1"></i> ${loggedInUserName} (${activeRole.toUpperCase()})`;
-            }
-
-            if (activeRole === 'student') {
+            if (activeUser.role === 'student') {
+                document.getElementById('displayStudentName').innerText = activeUser.name;
+                document.getElementById('displayStudentEmail').innerText = `Email: ${activeUser.email}`;
+                document.getElementById('displayStudentTrack').innerText = `Track: ${activeUser.track || 'TVL-CSS'}`;
                 document.getElementById('studentSection').classList.remove('hidden');
                 document.getElementById('trainerSection').classList.add('hidden');
             } else {
                 document.getElementById('studentSection').classList.add('hidden');
                 document.getElementById('trainerSection').classList.remove('hidden');
             }
+
             renderApp();
-        }
+        };
 
         window.logoutUser = function() {
-            window.activeUserSession = null;
+            activeUser = null;
             document.getElementById('authPage').classList.remove('hidden');
             document.getElementById('appDashboard').classList.add('hidden');
             document.getElementById('userNavControls').classList.add('hidden');
-            document.getElementById('loginForm').reset();
-            document.getElementById('signupForm').reset();
         };
 
         window.openModal = function() {
@@ -680,253 +323,167 @@
         window.closeModal = function() {
             document.getElementById('uploadModal').classList.add('hidden');
             document.getElementById('uploadModal').classList.remove('flex');
-            base64ImageData = null;
+            compressedImageData = null;
             document.getElementById('imagePreviewContainer').classList.add('hidden');
-            document.getElementById('entryForm').reset();
         };
 
-        // Automatic Client-Side Image Compression using HTML5 Canvas
-        window.previewSelectedImage = function(event) {
+        window.previewAndCompressImage = function(event) {
             const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const img = new Image();
-                    img.onload = function() {
-                        const canvas = document.createElement('canvas');
-                        let width = img.width;
-                        let height = img.height;
-                        const maxDim = 800; // Limit dimensions to 800px max
+            if (!file) return;
 
-                        if (width > height) {
-                            if (width > maxDim) {
-                                height *= maxDim / width;
-                                width = maxDim;
-                            }
-                        } else {
-                            if (height > maxDim) {
-                                width *= maxDim / height;
-                                height = maxDim;
-                            }
-                        }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const MAX_WIDTH = 800;
+                    const scaleSize = MAX_WIDTH / img.width;
+                    canvas.width = (img.width > MAX_WIDTH) ? MAX_WIDTH : img.width;
+                    canvas.height = (img.width > MAX_WIDTH) ? (img.height * scaleSize) : img.height;
 
-                        canvas.width = width;
-                        canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    compressedImageData = canvas.toDataURL('image/jpeg', 0.7);
 
-                        const ctx = canvas.getContext('2d');
-                        ctx.drawImage(img, 0, 0, width, height);
-
-                        // Compress quality to 0.7 JPEG to keep Base64 string small
-                        base64ImageData = canvas.toDataURL('image/jpeg', 0.7);
-
-                        const preview = document.getElementById('imagePreview');
-                        preview.src = base64ImageData;
-                        document.getElementById('imagePreviewContainer').classList.remove('hidden');
-                    };
-                    img.src = e.target.result;
+                    document.getElementById('imagePreview').src = compressedImageData;
+                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
                 };
-                reader.readAsDataURL(file);
-            }
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
         };
 
         window.saveEntry = async function(event) {
             event.preventDefault();
             const programType = document.getElementById('programTypeInput').value;
-            const module = document.getElementById('moduleInput').value;
             const title = document.getElementById('titleInput').value.trim();
             const reflection = document.getElementById('reflectionInput').value.trim();
 
-            const sess = window.activeUserSession || {};
-
-            const entryData = {
-                id: 'entry_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
-                studentLrn: sess.lrn || loggedInUserLrn || '109283746501',
-                studentEmail: sess.email || loggedInUserEmail || 'student@labinaynhs.edu.ph',
-                studentName: sess.name || loggedInUserName || 'Student Learner',
+            const newLog = {
+                studentLrn: activeUser.lrn,
+                studentName: activeUser.name,
+                studentEmail: activeUser.email,
                 programType,
-                module,
                 title,
                 reflection,
-                imageUrl: base64ImageData || null,
+                imageUrl: compressedImageData || null,
                 status: 'Pending Verification',
                 teacherFeedback: '',
                 timestamp: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
             };
 
-            // 1. Always save locally immediately
-            saveLocalEntry(entryData);
-
-            // 2. Try saving to Firestore
             try {
-                await addDoc(publicCollectionPath, entryData);
+                await addDoc(entriesRef, newLog);
+                closeModal();
+                alert("Log submitted to Cloud Database successfully!");
             } catch (err) {
-                console.warn("Firestore upload skipped/failed, saved locally:", err);
+                console.error("Save error:", err);
+                alert("Cloud submission error: " + err.message);
             }
+        };
 
-            // Sync memory array
-            const map = new Map();
-            getLocalEntries().forEach(item => map.set(item.id, item));
-            entries.forEach(item => map.set(item.id, item));
-            entries = Array.from(map.values());
+        window.setTrainerFilter = function(filter) {
+            trainerFilter = filter;
+            const pendingBtn = document.getElementById('tabPendingBtn');
+            const approvedBtn = document.getElementById('tabApprovedBtn');
 
-            closeModal();
-            alert("Log submitted successfully! It is now visible to teachers for evaluation.");
+            if (filter === 'Pending Verification') {
+                pendingBtn.className = "flex-1 py-2.5 rounded-lg bg-amber-500 text-slate-950 shadow";
+                approvedBtn.className = "flex-1 py-2.5 rounded-lg text-slate-700";
+            } else {
+                approvedBtn.className = "flex-1 py-2.5 rounded-lg bg-emerald-800 text-white shadow";
+                pendingBtn.className = "flex-1 py-2.5 rounded-lg text-slate-700";
+            }
             renderApp();
         };
 
         window.approveEntryWithFeedback = async function(entryId) {
-            const feedbackInput = document.getElementById(`feedbackInput-${entryId}`);
-            const feedbackText = feedbackInput ? feedbackInput.value.trim() : '';
-            const finalFeedback = feedbackText || 'Good work! Practical evidence verified by supervisor.';
-
-            // 1. Update local storage
-            updateLocalEntryStatus(entryId, 'Approved', finalFeedback);
-
-            // 2. Update memory state
-            const target = entries.find(e => e.id === entryId);
-            if (target) {
-                target.status = 'Approved';
-                target.teacherFeedback = finalFeedback;
-            }
-
-            // 3. Sync to Firestore if online
+            const feedbackText = document.getElementById(`feedbackInput-${entryId}`).value.trim();
             try {
-                const entryRef = doc(db, 'artifacts', appId, 'public', 'data', 'trainexus_entries', entryId);
-                await updateDoc(entryRef, { 
+                const entryDocRef = doc(db, 'trainexus_entries', entryId);
+                await updateDoc(entryDocRef, {
                     status: 'Approved',
-                    teacherFeedback: finalFeedback 
+                    teacherFeedback: feedbackText || 'Log verified and approved.'
                 });
+                alert("Log approved! Student will see your feedback instantly.");
             } catch (err) {
-                console.warn("Cloud update pending local save:", err);
+                console.error("Approval error:", err);
+                alert("Error approving entry: " + err.message);
             }
-
-            alert("Entry approved! Status updated to Approved.");
-            renderApp();
         };
 
         function renderApp() {
-            const evidenceList = document.getElementById('evidenceList');
-            const trainerQueue = document.getElementById('trainerQueue');
-            const pendingNotificationBadge = document.getElementById('pendingNotificationBadge');
-            const filterPendingCount = document.getElementById('filterPendingCount');
-            const filterApprovedCount = document.getElementById('filterApprovedCount');
+            if (!activeUser) return;
 
-            // Count pending vs approved entries
-            const pendingCount = entries.filter(e => e.status === 'Pending Verification').length;
-            const approvedCount = entries.filter(e => e.status === 'Approved').length;
-            
-            if (pendingNotificationBadge) {
-                pendingNotificationBadge.innerText = `${pendingCount} New Submissions`;
-            }
-            if (filterPendingCount) filterPendingCount.innerText = pendingCount;
-            if (filterApprovedCount) filterApprovedCount.innerText = approvedCount;
+            const pendingItems = entries.filter(e => e.status === 'Pending Verification');
+            const approvedItems = entries.filter(e => e.status === 'Approved');
 
-            // Render Student Platform View
-            if (evidenceList) {
-                const sess = window.activeUserSession || { lrn: loggedInUserLrn, email: loggedInUserEmail, name: loggedInUserName };
-                const studentLogs = entries.filter(e => {
-                    if (!sess.name && !sess.lrn && !sess.email) return true;
-                    return (
-                        (sess.lrn && sess.lrn !== 'N/A' && e.studentLrn === sess.lrn) ||
-                        (sess.email && sess.email !== 'N/A' && e.studentEmail === sess.email) ||
-                        (sess.name && e.studentName === sess.name)
-                    );
-                });
-                
-                if (studentLogs.length === 0) {
-                    evidenceList.innerHTML = `<p class="text-xs text-gray-500 py-6 text-center">No submitted logs yet. Click "Add Log / Evidence" to post your first entry.</p>`;
+            document.getElementById('pendingCount').innerText = pendingItems.length;
+            document.getElementById('approvedCount').innerText = approvedItems.length;
+
+            if (activeUser.role === 'student') {
+                const evidenceList = document.getElementById('evidenceList');
+                const myLogs = entries.filter(e => e.studentLrn === activeUser.lrn || e.studentEmail === activeUser.email || e.studentName === activeUser.name);
+
+                if (myLogs.length === 0) {
+                    evidenceList.innerHTML = `<p class="text-xs text-gray-500 text-center py-4">No logs submitted yet. Click "Add Log / Evidence" to submit.</p>`;
                 } else {
-                    evidenceList.innerHTML = studentLogs.map(item => `
-                        <div class="p-4 border border-slate-200 rounded-xl space-y-3 bg-slate-50">
+                    evidenceList.innerHTML = myLogs.map(item => `
+                        <div class="p-4 border rounded-xl space-y-3 bg-slate-50">
                             <div class="flex justify-between items-start">
                                 <div>
-                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded ${item.programType === 'JDVP-TVL' ? 'bg-purple-100 text-purple-800' : 'bg-emerald-100 text-emerald-800'}">${item.programType || 'Work Immersion'}</span>
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">${item.programType}</span>
                                     <h4 class="font-bold text-sm text-slate-800 mt-1">${item.title}</h4>
-                                    <p class="text-xs text-slate-500">Module: ${item.module} • ${item.timestamp}</p>
+                                    <p class="text-xs text-slate-500">${item.timestamp}</p>
                                 </div>
-                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${item.status === 'Approved' ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}">
-                                    <i class="fa-solid ${item.status === 'Approved' ? 'fa-circle-check text-emerald-600' : 'fa-clock text-amber-600'} mr-1"></i>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${item.status === 'Approved' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
                                     ${item.status}
                                 </span>
                             </div>
-                            
                             <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border">${item.reflection}</p>
-                            
-                            ${item.imageUrl ? `<img src="${item.imageUrl}" class="w-full h-40 object-cover rounded-lg border">` : ''}
-
+                            ${item.imageUrl ? `<img src="${item.imageUrl}" class="w-full h-44 object-cover rounded-lg border">` : ''}
                             ${item.teacherFeedback ? `
-                                <div class="bg-emerald-50 border border-emerald-200 p-3 rounded-lg flex items-start gap-2.5">
-                                    <i class="fa-solid fa-comment-dots text-emerald-700 mt-0.5"></i>
-                                    <div>
-                                        <p class="text-[11px] font-bold text-emerald-900">Teacher / Assessor Feedback:</p>
-                                        <p class="text-xs text-emerald-800 font-medium">${item.teacherFeedback}</p>
-                                    </div>
+                                <div class="bg-emerald-50 border border-emerald-200 p-3 rounded-lg">
+                                    <p class="text-[11px] font-bold text-emerald-900">Teacher Feedback:</p>
+                                    <p class="text-xs text-emerald-800">${item.teacherFeedback}</p>
                                 </div>
-                            ` : item.status === 'Pending Verification' ? `
-                                <p class="text-[11px] text-amber-700 italic flex items-center gap-1">
-                                    <i class="fa-solid fa-hourglass-half"></i> Awaiting teacher feedback and evaluation.
-                                </p>
                             ` : ''}
                         </div>
                     `).join('');
                 }
-            }
+            } else {
+                const trainerQueue = document.getElementById('trainerQueue');
+                const filtered = entries.filter(e => e.status === trainerFilter);
 
-            // Render Teacher Platform Review Panel (Filtered by Pending vs Approved)
-            if (trainerQueue) {
-                const filteredEntries = entries.filter(e => {
-                    if (activeTeacherFilter === 'Pending Verification') {
-                        return e.status === 'Pending Verification' || !e.status;
-                    }
-                    return e.status === 'Approved';
-                });
-
-                if (filteredEntries.length === 0) {
-                    trainerQueue.innerHTML = `
-                        <div class="py-8 text-center space-y-2">
-                            <i class="fa-solid fa-folder-open text-slate-300 text-3xl"></i>
-                            <p class="text-xs text-gray-500 font-medium">No student logs found under <strong>${activeTeacherFilter}</strong> status.</p>
-                        </div>
-                    `;
+                if (filtered.length === 0) {
+                    trainerQueue.innerHTML = `<p class="text-xs text-gray-500 text-center py-4">No ${trainerFilter} logs found.</p>`;
                 } else {
-                    trainerQueue.innerHTML = filteredEntries.map(item => `
-                        <div class="p-4 border ${item.status === 'Pending Verification' ? 'border-amber-300 bg-amber-50/30' : 'border-emerald-200 bg-emerald-50/20'} rounded-xl space-y-3">
+                    trainerQueue.innerHTML = filtered.map(item => `
+                        <div class="p-4 border border-slate-200 bg-slate-50 rounded-xl space-y-3">
                             <div class="flex justify-between items-start">
                                 <div>
-                                    <p class="text-xs font-bold text-emerald-900 flex items-center gap-1.5">
-                                        <i class="fa-solid fa-user-graduate"></i>
-                                        <span>${item.studentName || 'Student'}</span>
-                                        <span class="text-slate-400 font-normal">(${item.studentLrn || 'LRN N/A'})</span>
-                                    </p>
+                                    <p class="text-xs font-bold text-emerald-900"><i class="fa-solid fa-user-graduate mr-1"></i> ${item.studentName || 'Student'} (${item.studentLrn || 'LRN N/A'})</p>
                                     <h4 class="font-bold text-sm text-slate-800 mt-0.5">${item.title}</h4>
-                                    <p class="text-xs text-slate-500">Module: ${item.module} • ${item.timestamp}</p>
+                                    <p class="text-xs text-slate-500">${item.timestamp}</p>
                                 </div>
-                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${item.status === 'Approved' ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${item.status === 'Approved' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
                                     ${item.status}
                                 </span>
                             </div>
-
                             <p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border">${item.reflection}</p>
+                            ${item.imageUrl ? `<img src="${item.imageUrl}" class="w-full h-44 object-cover rounded-lg border">` : ''}
                             
-                            ${item.imageUrl ? `<img src="${item.imageUrl}" class="w-full h-40 object-cover rounded-lg border">` : ''}
-
-                            <div class="pt-2 border-t border-slate-200 space-y-2">
+                            <div class="pt-2 border-t space-y-2">
                                 ${item.status === 'Approved' ? `
-                                    <div class="bg-white p-2.5 rounded-lg border text-xs space-y-1">
-                                        <p class="font-bold text-emerald-900 flex items-center gap-1">
-                                            <i class="fa-solid fa-circle-check text-emerald-600"></i> Approved & Verified Feedback:
-                                        </p>
-                                        <p class="text-slate-600">${item.teacherFeedback || 'No additional comments provided.'}</p>
+                                    <div class="bg-white p-2.5 rounded-lg border text-xs">
+                                        <p class="font-bold text-slate-700">Submitted Feedback:</p>
+                                        <p class="text-slate-600">${item.teacherFeedback}</p>
                                     </div>
                                 ` : `
-                                    <div>
-                                        <label class="block text-xs font-bold text-slate-700 mb-1">Add Feedback / Instructions for Student</label>
-                                        <textarea id="feedbackInput-${item.id}" rows="2" placeholder="e.g. Excellent practical demonstration, clear documentation!" class="w-full border p-2 rounded-lg text-xs outline-none focus:ring-2 focus:ring-emerald-600"></textarea>
-                                    </div>
+                                    <textarea id="feedbackInput-${item.id}" rows="2" placeholder="Add feedback..." class="w-full border p-2 rounded text-xs outline-none focus:ring-2 focus:ring-emerald-600"></textarea>
                                     <div class="flex justify-end">
-                                        <button onclick="approveEntryWithFeedback('${item.id}')" class="text-xs bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2 rounded-lg font-bold shadow transition flex items-center gap-1.5">
-                                            <i class="fa-solid fa-check-circle"></i>
-                                            <span>Approve Log & Send Feedback</span>
+                                        <button onclick="approveEntryWithFeedback('${item.id}')" class="text-xs bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2 rounded-lg font-bold shadow">
+                                            Approve Log & Send Feedback
                                         </button>
                                     </div>
                                 `}
